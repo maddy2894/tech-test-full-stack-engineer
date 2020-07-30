@@ -9,7 +9,9 @@ module.exports = function (app) {
 async function getAllCapsules(req, res) {
   let returnData = {};
   try {
-    const { data } = await axios.get('https://api.spacexdata.com/v3/capsules');
+    const { data } = await axios.get(
+      `https://api.spacexdata.com/v3/capsules?sort=original_launch`
+    );
     returnData = data;
   } catch (error) {
     return res

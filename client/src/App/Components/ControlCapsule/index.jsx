@@ -20,6 +20,10 @@ export default function ControlCapsule() {
   const [disableButton, setDisableButton] = useState(false);
 
   function fetchCapsules() {
+    dispatch({
+      type: 'SET_LOADING',
+      payload: 'Loading',
+    });
     axios
       .get('http://localhost:4000/api/capsules/all')
       .then((responseData) => {
@@ -54,6 +58,10 @@ export default function ControlCapsule() {
         payload: 'Error: Input should not contain any of #, $, %, & characters',
       });
     } else {
+      dispatch({
+        type: 'SET_LOADING',
+        payload: 'Loading',
+      });
       axios
         .get('http://localhost:4000/api/landing-pad', {
           params: {

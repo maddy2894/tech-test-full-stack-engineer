@@ -23,17 +23,17 @@ const Container = styled.div`
   height: 50vh;
   display: grid;
   grid-template-rows: 66.7% 33.3%;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 33% 33% 34%;
   grid-template-areas:
     'console console console'
-    'button rocket landing';
+    'capsule rocket landing';
   @media screen and (max-width: 768px) {
     width: 100vw;
     height: 100vh;
     grid-template-rows: 34% 33% 33%;
     grid-template-columns: 66.7% 33.3%;
     grid-template-areas:
-      'console button'
+      'console capsule'
       'console rocket'
       'console landing';
   }

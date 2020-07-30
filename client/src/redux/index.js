@@ -8,6 +8,7 @@ const reducers = {
     oldState = {
       initial: true,
       error: false,
+      isLoading: false,
     },
     action
   ) => {
@@ -19,6 +20,7 @@ const reducers = {
           initial: false,
           capsule: action.payload,
           error: false,
+          isLoading: false,
         };
       case 'SET_ERROR':
         return {
@@ -27,6 +29,15 @@ const reducers = {
           capsule: action.payload,
           error: true,
           errorMessage: action.payload,
+          isLoading: false,
+        };
+      case 'SET_LOADING':
+        return {
+          ...oldState,
+          initial: false,
+          capsule: {},
+          error: false,
+          isLoading: true,
         };
       default:
         return oldState;

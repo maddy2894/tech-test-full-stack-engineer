@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 const CapsuleButtonWrapper = styled.div`
-  grid-area: button;
+  grid-area: capsule;
   display: flex;
   place-content: center;
   align-items: center;
 `;
 
 const CapsuleButton = styled.button`
-  height: 50%;
+  height: 40%;
   width: 86%;
   @media screen and (max-width: 768px) {
     height: 25%;
@@ -36,23 +36,24 @@ const LandingPadWrapper = styled.div`
   align-items: center;
   justify-content: space-around;
   @media screen and (max-width: 768px) {
+    width: 95%;
     flex-direction: column;
     justify-content: space-evenly;
   }
 `;
 
 const LandingPadButton = styled.button`
-  height: 50%;
-  width: 45%;
+  height: 40%;
+  width: 42%;
   @media screen and (max-width: 768px) {
     height: 25%;
-    width: 85%;
+    width: 88%;
   }
 `;
 
 const LandingPadInput = styled.input`
-  height: 45%;
-  width: 45%;
+  height: 35%;
+  width: 48%;
   @media screen and (max-width: 768px) {
     height: 25%;
     width: 85%;
