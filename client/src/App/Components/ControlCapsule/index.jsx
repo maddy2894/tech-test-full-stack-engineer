@@ -33,7 +33,6 @@ export default function ControlCapsule() {
         });
       })
       .catch((error) => {
-        console.log(error);
         dispatch({
           type: 'SET_ERROR',
           payload: `Error: ${error.response.data.message}`,

@@ -18,8 +18,8 @@ export default function DisplayConsole() {
       ) : capsuleData.error ? (
         <ErrorMessage>{capsuleData.errorMessage}</ErrorMessage>
       ) : (
-        capsuleData.capsule?.map((obj, i) => (
-          <ConsolePre key={i}>{JSON.stringify(obj, null, 2)}</ConsolePre>
+        capsuleData.capsule?.map((data, i) => (
+          <ConsolePre key={i}>{JSON.stringify(data, null, 2)}</ConsolePre>
         ))
       )}
     </ConsoleWrapper>

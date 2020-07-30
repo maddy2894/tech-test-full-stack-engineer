@@ -23,16 +23,16 @@ const RocketWrapper = styled.div`
 
 const LandingPad = styled.div`
   grid-area: landing;
-  display: flex;
   width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
 `;
 
 const LandingPadWrapper = styled.div`
   width: 86%;
-  display: flex;
   height: 100%;
+  display: flex;
   align-items: center;
   justify-content: space-around;
   @media screen and (max-width: 768px) {
