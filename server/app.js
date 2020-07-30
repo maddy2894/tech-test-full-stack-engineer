@@ -1,18 +1,20 @@
 const dbPool = require('./db');
 const express = require('express');
 const bodyParser = require('body-parser');
+const axios = require('axios');
+const router = require('./router');
+const cors = require('cors');
 
 const app = express();
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/api/capsules/all', async (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-  const rows = await dbPool.query('SELECT * FROM spaceData');
-  return res
-    .status(200)
-    .send({ message: `Hello World ${JSON.stringify(rows)}` });
+router(app);
+
+app.get('*', (req, res) => {
+  return res.status(404).send({ message: 'Route not found' });
 });
 
 app.listen('4000');
