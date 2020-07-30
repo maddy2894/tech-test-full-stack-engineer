@@ -70,7 +70,7 @@ export default function ControlCapsule() {
         .then((response) => {
           dispatch({
             type: 'SET_DATA',
-            payload: [response.data],
+            payload: [response.data.returnData],
           });
         })
         .catch((error) => {
