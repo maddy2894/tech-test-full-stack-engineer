@@ -6,7 +6,7 @@ const isDevelopment = NODE_ENV === 'development';
 const reducers = {
   spaceData: (
     oldState = {
-      initial: true,
+      isInitial: true,
       error: false,
       isLoading: false,
     },
@@ -17,7 +17,7 @@ const reducers = {
       case 'SET_DATA':
         return {
           ...oldState,
-          initial: false,
+          isInitial: false,
           capsule: action.payload,
           error: false,
           isLoading: false,
@@ -25,7 +25,7 @@ const reducers = {
       case 'SET_ERROR':
         return {
           ...oldState,
-          initial: false,
+          isInitial: false,
           capsule: action.payload,
           error: true,
           errorMessage: action.payload,
@@ -34,7 +34,7 @@ const reducers = {
       case 'SET_LOADING':
         return {
           ...oldState,
-          initial: false,
+          isInitial: false,
           capsule: {},
           error: false,
           isLoading: true,

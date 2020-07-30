@@ -7,7 +7,7 @@ export default function DisplayConsole() {
 
   return (
     <ConsoleWrapper>
-      {capsuleData.initial ? (
+      {capsuleData.isInitial ? (
         <MessageDiv>
           Please click on Capsules to fetch all the capsule data or enter a
           value inside input field and click on Landing Pad to get landing pad
